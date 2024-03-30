@@ -11,19 +11,20 @@ const useFetch = (url,options={}) => {
         const response = await fetch(url,{...options});
         if(!response.ok) throw new Error(response.statusText);
         const result = await response.json();
-        console.log(result);
-        (result.products && result.products.length) ? setData(result) : null ;
-        
+        setData(result);
+        setLoading(false);
+        setErr(null);
     }
     catch(e){
         setErr(e);
         setLoading(false)
     }
-    
   }
   useEffect(()=>{
     fetchData();
   },[url]);
+
+  return {data,loading,err}
 }
 
 export default useFetch;

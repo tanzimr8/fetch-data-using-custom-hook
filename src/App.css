@@ -1,3 +1,6 @@
+.text-cemter{
+    text-align: center;
+}
 /* Button */
 .btn{
 
@@ -32,17 +35,30 @@
 
 .products-container{
     min-height: 100vh;
+    /* max-width: 80%; */
+    margin: 0 auto;
+    /* overflow-x: hidden; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
+.products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+}
 .product{
-    border: 3px solid rgb(240, 107, 58);
-    padding: 80px;
-    text-align: center;
     position: relative;
+    border: 1px solid rgb(240, 107, 58);
+    padding: 20px 40px;
+    text-align: center;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .product-discount-percentage{
     position: absolute;
@@ -53,8 +69,9 @@
     font-size: 15px;
     color: #fff;
 }
-.product-image{
-
+.product-image img{
+    width: 90%;
+    object-fit: cover;
 }
 .product-brand{
     letter-spacing: 1px;
@@ -69,4 +86,8 @@
 }
 .btn .btn-cart{
 
+}
+.btn-load{
+    background: rgb(98, 0, 238);
+    margin: 20px 0;
 }
