@@ -7,6 +7,9 @@ const Products = () => {
   const handleLoadButton = ()=>{
     setCount(count+3);
   }
+  const handleLessButton =()=>{
+    setCount(3);
+  }
   if(loading){
     return <h1 className='text-cemter'>Loading...</h1>
   }
@@ -21,7 +24,7 @@ const Products = () => {
           ) : err
           }
         </div>
-        <button onClick={handleLoadButton} className='btn btn-load'>Load more</button>
+        <button onClick={count > 11 ? handleLessButton: handleLoadButton} className='btn btn-load'>{count > 11 ? 'Show Less' : 'Load More'}</button>
       </div>
   )
 }
