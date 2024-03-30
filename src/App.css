@@ -3,7 +3,6 @@
 }
 /* Button */
 .btn{
-
     display: inline-block;
     outline: none;
     cursor: pointer;
@@ -12,7 +11,7 @@
     padding: 0 16px;
     border-radius: 4px;
     color: #fff;
-    background: rgb(240, 107, 58);
+    background: rgb(26, 10, 4);
     line-height: 1.15;
     font-size: 14px;
     height: 36px;
@@ -50,7 +49,7 @@
 }
 .product{
     position: relative;
-    border: 1px solid rgb(240, 107, 58);
+    border: 1px solid rgb(26, 10, 4);
     padding: 20px 40px;
     text-align: center;
     width: 200px;
@@ -64,7 +63,7 @@
     position: absolute;
     right: 15px;
     top: 10px;
-    background-color: rgb(226, 110, 67);
+    background-color:  rgb(93, 40, 168);
     padding: 7px 10px;
     font-size: 15px;
     color: #fff;
@@ -84,10 +83,14 @@
 .product-price{
     font-weight: 500;
 }
-.btn .btn-cart{
-
-}
 .btn-load{
     background: rgb(98, 0, 238);
     margin: 20px 0;
 }
+@media only screen and (max-width: 600px) {
+    .products{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+  }

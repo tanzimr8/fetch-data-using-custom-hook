@@ -24,7 +24,7 @@ const Products = () => {
           ) : err
           }
         </div>
-        <button onClick={count > 11 ? handleLessButton: handleLoadButton} className='btn btn-load'>{count > 11 ? 'Show Less' : 'Load More'}</button>
+        <button onClick={count > 8 ? handleLessButton: handleLoadButton} className='btn btn-load'>{count > 8 ? 'Show Less' : 'Load More'}</button>
       </div>
   )
 }

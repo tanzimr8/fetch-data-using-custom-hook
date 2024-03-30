@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-
 const useFetch = (url,options={}) => {
   const [data,setData] = useState(null);
   const [loading,setLoading] = useState(false);
